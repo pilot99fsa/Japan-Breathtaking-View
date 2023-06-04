@@ -1,0 +1,670 @@
+@charset "UTF-8";
+/* imageエリアのCSS */
+/* imageエリアの共通のCSS */
+.japan-image {
+  padding: 0 20px;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+  height: 150vh;
+  background-repeat: no-repeat;
+  font-family: Helvetica, sans-serif;
+  color: azure;
+}
+.japan-image.ji1 {
+  background-image: url(japan_image/japan1_mt_fuji.jpg);
+  /* ページを開いた時にji1-textが下からフェードインするアニメーション */
+}
+.japan-image.ji1 p {
+  font-size: 90px;
+  font-weight: 400;
+  font-family: "Yuji Mai";
+  letter-spacing: 7px;
+}
+.japan-image.ji1 .ji1-text {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  display: block;
+}
+.japan-image.ji1 .ji1-text.ji1-fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 2s;
+  animation-delay: s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.japan-image.ji2 {
+  background-image: url(japan_image/japan2_akihabara.jpg);
+  width: 100%;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+}
+.japan-image.ji2 .jt2-o-box {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.japan-image.ji2 .jt2-o-box p {
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+}
+.japan-image.ji2 .ji2-white-fadeout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 5s;
+}
+.japan-image.ji2 .ji2-fadeout {
+  opacity: 0;
+}
+.japan-image.ji4 {
+  background-image: url(japan_image/japan4_arashiyama_bamboo.jpg);
+  width: 100%;
+}
+.japan-image.ji4 .ji4-textbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  font-size: 30px;
+}
+.japan-image.ji4 .ji4-textbox .ji4-text-animation {
+  opacity: 0;
+}
+.japan-image.ji4 .ji4-textbox .ji4-text-animation span {
+  opacity: 0;
+}
+.japan-image.ji4 .ji4-textbox .TBR {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.japan-image.ji4 .ji4-textbox .AAK {
+  text-align: right;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.japan-image.ji5 {
+  background-image: url(japan_image/japan5_above_shibuya.jpg);
+  padding: 0;
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  z-index: 1;
+}
+.japan-image.ji5.ji5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.japan-image.ji5 p {
+  font-family: source-han-serif-japanese, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 100px;
+  line-height: 1em;
+}
+.japan-image.ji5 .japan-image-ji5-black-back {
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.japan-image.ji5 .is-slideout {
+  transform: translateX(-100vw);
+  transition: transform 2s 3s;
+}
+.japan-image.ji5 .ji5-textbox {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.japan-image.ji5 .ji5-textbox .tokyo-shibuya-scramble-crossing {
+  display: flex;
+  align-items: end;
+}
+.japan-image.ji5 .ji5-textbox .tokyo-shibuya-scramble-crossing .tokyo-shibuya-scramble {
+  display: flex;
+  flex-direction: column;
+}
+.japan-image.ji5 .ji5-textbox .tokyo-shibuya-scramble-crossing .tokyo-shibuya-scramble .eva-tokyoshibuya-box {
+  display: flex;
+  align-items: end;
+}
+.japan-image.ji5 .ji5-textbox .tokyo-shibuya-scramble-crossing .tokyo-shibuya-scramble .eva-tokyoshibuya-box .tokyo-eva-box {
+  display: flex;
+  flex-direction: column;
+}
+.japan-image.ji5 .ji5-textbox .tokyo-shibuya-scramble-crossing .scramble p {
+  font-size: 50px;
+}
+.japan-image.ji5 .ji5-textbox .crossing-text p {
+  font-size: 75px;
+  margin-right: 40px;
+}
+.japan-image.ji5 .ji5-textbox .crossing-text p span {
+  font-size: 150px;
+  vertical-align: 15px;
+}
+.japan-image.ji6 {
+  background-image: url(japan_image/japan6_fushimi_inari.jpg);
+  font-family: "Belleza", sans-serif;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  /* フェードイン時に入るクラス */
+}
+.japan-image.ji6 .ji6-text {
+  /* 最初は非表示 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 2s, visibility 1s, transform 2s;
+}
+.japan-image.ji6 .ji6-is-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  overflow: hidden;
+}
+.japan-image.ji7 {
+  background-image: url(japan_image/japan7_daigo_temple.jpg);
+  width: 100%;
+  height: 120vh;
+  padding: 60px 60px;
+}
+.japan-image.ji7 .ji7-text-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  font-weight: 600;
+  font-style: normal;
+  animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
+}
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.japan-image.ji7 .ji7-text-box .daigo-text {
+  -webkit-text-decoration: solid 1px underline;
+          text-decoration: solid 1px underline;
+  text-underline-offset: 10px;
+  text-shadow: #000 1px 1px 1px;
+  font-size: 36px;
+}
+.japan-image.ji7 .ji7-text-box .daigoji {
+  width: 100%;
+  height: 100%;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-shadow: #000 1px 1px 1px;
+  font-size: 100px;
+}
+.japan-image.ji7 .ji7-text-box .daigoji p {
+  font-family: hiragino-mincho-pron, sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.japan-image.ji8 {
+  background-image: url(japan_image/japan8_meguro_river.jpg);
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: relative;
+  z-index: 1;
+}
+.japan-image.ji8 .ji8-sakura-effect {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.japan-image.ji8 .sakura-carnival {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.japan-image.ji9 {
+  width: 100%;
+  height: 120vh;
+  background-image: url(japan_image/japan9_tokyo_tower_sunset_grow.jpg);
+  background-color: none;
+}
+.japan-image.ji9 .white-bg {
+  background-image: url(japan_image/sunrise.png);
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 36px;
+}
+.japan-image.ji9 br {
+  display: none;
+}
+.japan-image.ji10 {
+  background-image: url(japan_image/japan10_kyoto_tohji.jpg);
+  padding: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.japan-image.ji10 .ji10-kyoto-discover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50px);
+  transition: opacity 2s, visibility 1s, transform 1s;
+}
+.japan-image.ji10 .ji10-kyoto-discover img {
+  height: 40%;
+  width: 40%;
+  overflow: hidden;
+}
+.japan-image.ji10 .ji10-kyoto-discover-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* textエリアのCSS */
+/* textエリアの共通のCSS */
+.japan-text {
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+  height: 120vh;
+  background-repeat: no-repeat;
+  font-family: Helvetica, sans-serif;
+  color: azure;
+  /* textエリアの個別のCSS */
+  /* textエリア 富士山のtextのCSS */
+  /* textエリア 新宿の夜のtextのCSS */
+  /* textエリア ネッコのtextのCSS
+  // &.jt3 {
+  //   background-image: url(japan_image/japan3_cat_and_cherry_blssm.jpg);
+  //   width: 100%;
+  //   height: 100vh;
+  //   .jt3-design {
+  //     display: flex;
+  //     justify-content: center;
+
+  //     width: 100%;
+  //     height: 100%;
+  //     padding-top: 50px;
+  //     color: #ffc0cb;
+  //     text-align: center;
+  //     font-size: 5vw;
+  //     font-weight: 500;
+  //     -webkit-text-stroke: 1px #fff; /* webkitのベンダープレフィックス */
+  /*  textエリア 嵐山の竹林のtextのCSS */
+  /* textエリア 渋谷上空のtextのCSS */
+  /* textエリア 伏見稲荷の千本鳥居のtextのCSS */
+  /* textエリア 京都の醍醐寺のtextのCSS */
+  /* textエリア 目黒川と満開の桜のtextのCSS */
+  /* textエリア 東京タワーと夕焼け小焼けのtextのCSS */
+  /* textエリア 京都の舞妓さんと五重塔のtextのCSS */
+}
+.japan-text.jt1 {
+  background-image: url(japan_image/japan1_mt_fuji.jpg);
+}
+.japan-text.jt1 .jt1-opacity {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 24px;
+}
+.japan-text.jt1 .jt1-opacity .fujijyamafadebottom {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 2s, visibility 1s, transform 1s;
+}
+.japan-text.jt1 .jt1-opacity .is-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.japan-text.jt1 .jt1-opacity p {
+  width: 80%;
+}
+.japan-text.jt2 {
+  background-image: url(japan_image/japan2_akihabara.jpg);
+  width: 100%;
+  height: 150vh;
+  position: relative;
+  z-index: 1;
+}
+.japan-text.jt2 .jt2-blackback-before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 2s;
+}
+.japan-text.jt2 .jt2-blackback-after {
+  opacity: 1;
+}
+.japan-text.jt2 .jt2-textbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.japan-text.jt2 .jt2-textbox p {
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+}
+.japan-text.jt4 {
+  background-image: url(japan_image/japan4_arashiyama_bamboo.jpg);
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 120vh;
+  overflow: hidden;
+}
+.japan-text.jt4 .jt4-text-animation {
+  opacity: 0;
+}
+.japan-text.jt4 .jt4-text-animation span {
+  opacity: 0;
+}
+.japan-text.jt4:before {
+  content: "";
+  background: inherit;
+  filter: blur(4px);
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+.japan-text .jt4-textbox {
+  padding-left: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 28px;
+}
+.japan-text .jt4-textbox br {
+  display: none;
+}
+.japan-text.jt5 {
+  background-image: url(japan_image/japan5_above_shibuya.jpg);
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 120vh;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.japan-text.jt5.jt5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.japan-text.jt5 .jt5-blackback {
+  width: 50%;
+  height: 100%;
+  justify-content: right;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  transform: translateX(50vw);
+}
+.japan-text.jt5 .is-from-right-slidein {
+  transform: translateX(0);
+  transition: transform 2s 2s;
+  background-color: #000;
+  overflow: hidden;
+}
+.japan-text.jt5 .jt5-shibuya-text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  text-align: left;
+  font-size: 24px;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+}
+.japan-text.jt6 {
+  background-image: url(japan_image/japan6_fushimi_inari.jpg);
+  width: 100%;
+  height: 100vh;
+  font-family: "Belleza", sans-serif;
+  padding: 20px;
+}
+.japan-text.jt6 .jt6-text {
+  width: 50%;
+  text-shadow: 1px 1px 0 #000, 2px 2px 0 #000, 3px 3px 0 #000, 4px 4px 0 #000, 5px 5px 0 #000;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 2s, visibility 1s, transform 2s;
+}
+.japan-text.jt6 .jt6-is-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  overflow: hidden;
+}
+.japan-text.jt7 {
+  background-image: url(japan_image/japan7_daigo_temple.jpg);
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  -webkit-text-decoration: underline solid 1px;
+          text-decoration: underline solid 1px;
+  text-underline-offset: 10px;
+  text-shadow: #000 1px 1px 1px;
+  font-size: 24px;
+}
+.japan-text.jt7 .jt7-opacity {
+  width: 50%;
+  animation: fuwafuwa 3s infinite ease-in-out 0.8s alternate;
+}
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.japan-text.jt8 {
+  background-image: url(japan_image/japan8_meguro_river.jpg);
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+.japan-text.jt8 .jt8-sakura-effect {
+  height: 100vh; /* コンテナの高さ */
+  width: 100%; /* コンテナの横幅 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.japan-text.jt8 .jt8-opacity {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.japan-text.jt9 {
+  background-image: url(japan_image/japan9_tokyo_tower_sunset_grow.jpg);
+  width: 100%;
+  height: 160vh;
+  padding: 20px;
+}
+.japan-text.jt9 .white-bg {
+  background-image: url(japan_image/sunrise.png);
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 16px;
+}
+.japan-text.jt9 .white-bg h1 {
+  text-align: center;
+  width: 80%;
+}
+.japan-text.jt10 {
+  background-image: url(japan_image/japan10_kyoto_tohji.jpg);
+  display: flex;
+  padding: 20px;
+  justify-content: left;
+  align-items: center;
+}
+.japan-text.jt10 p {
+  width: 60%;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+.japan-text.jt10 h1 {
+  font-size: 36px;
+}
+.japan-text.jt10 .jt10-kyoto-discover {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50px);
+  transition: opacity 2s, visibility 1s, transform 1s;
+}
+.japan-text.jt10 .jt10-kyoto-discover-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}/*# sourceMappingURL=style.css.map */
